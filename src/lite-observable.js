@@ -1,25 +1,25 @@
 export class Observable {
-  value: string | number | boolean;
-  observers: Function[];
+  value;
+  observers;
 
-  constructor(initialValue: string | number | boolean) {
+  constructor(initialValue) {
     this.value = initialValue;
     this.observers = [];    
   }
 
-  subscribe(fn: Function) { 
+  subscribe(fn) { 
     this.observers.push(fn)
   }
 
-  unsubscribe(fn: Function) { 
+  unsubscribe(fn) { 
     this.observers = this.observers.filter(ob => ob !== fn)
   }
 
-  notify(oldValue: string | number | boolean) {
+  notify(oldValue) {
     this.observers.forEach(fn => fn.call(null, oldValue, this.value))
   }
 
-  set(newValue: string | number | boolean) {
+  set(newValue) {
     let old = this.value;
     this.value = newValue;
     this.notify(old);
