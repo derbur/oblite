@@ -1,10 +1,15 @@
 {
   "name": "oblite",
-  "version": "0.0.9",
-  "main": "index.js",
+  "description": "A simple, no-frills, lightweight observable",
+  "version": "0.0.10",
+  "main": "oblite.js",
+  "types": "oblite.d.ts",
   "license": "MIT",
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "build": "rm -rf dist && npx tsc && cp package.json dist/package.json"
   }
 }

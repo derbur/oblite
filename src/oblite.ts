@@ -1,10 +1,10 @@
 export class Observable {
   value: string | number | boolean;
-  observers: Function[];
+  private observers: Function[];
 
   constructor(initialValue: string | number | boolean) {
     this.value = initialValue;
-    this.observers = [];    
+    this.observers = [];
   }
 
   subscribe(fn: Function) { 
@@ -15,7 +15,7 @@ export class Observable {
     this.observers = this.observers.filter(ob => ob !== fn)
   }
 
-  notify(oldValue: string | number | boolean) {
+  private notify(oldValue: string | number | boolean) {
     this.observers.forEach(fn => fn.call(null, oldValue, this.value))
   }
 
