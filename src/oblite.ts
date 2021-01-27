@@ -24,5 +24,4 @@ export class Observable {
     this.value = newValue;
     this.notify(old);
   }
-
 }

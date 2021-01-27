@@ -1,4 +1,4 @@
-import { Observable } from '../src/lite-observable';
+import { Observable } from '../src/oblite';
 
 let myObservable = new Observable(0);
 
