@@ -1,6 +1,5 @@
 import { describe } from 'mocha';
-import chai from 'chai';
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { Observable } from '../src/oblite';
