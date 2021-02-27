@@ -20,7 +20,7 @@ export class Observable {
   }
 
   set(newValue: string | number | boolean) {
-    let old = this.value;
+    const old = this.value;
     this.value = newValue;
     this.notify(old);
   }
