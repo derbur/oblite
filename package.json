@@ -1,7 +1,7 @@
 {
   "name": "oblite",
   "description": "A simple, no-frills, lightweight observable",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "oblite.js",
   "types": "oblite.d.ts",
   "license": "MIT",
