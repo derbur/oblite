@@ -1,4 +1,9 @@
-import { Observable } from '../src/oblite';
+# Oblite
+A lightweight typescript observable! 👀
+
+How to observe:
+```
+import { Observable } from 'oblite';
 
 // Create the observable
 let myObservable = new Observable(0);
@@ -16,3 +21,4 @@ myObservable.set(1);
 
 // old value: 1 | new value: 2
 myObservable.set(2);
+```
