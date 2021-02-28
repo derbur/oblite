@@ -22,7 +22,8 @@
   },
   "scripts": {
     "build": "rm -rf dist && npx tsc && cp package.json dist/package.json && cp NPM_README.md dist/README.md && yarn updateNpmReadme",
-    "test": "npx mocha -r ts-node/register --extensions ts --watch --watch-files 'tests/*.ts' tests/*.ts",
+    "watch-test": "npx mocha -r ts-node/register --extensions ts --watch --watch-files 'tests/*.ts' tests/*.ts",
+    "test": "npx mocha -r ts-node/register --extensions ts tests/*.ts",
     "example": "npx ts-node ./examples/example.ts",
     "updateNpmReadme": "awk -i inplace -v a=\"$(cat ./examples/example.ts)\" '{sub(/__EXAMPLE_CODE__/,a)}1' dist/README.md"
   }
